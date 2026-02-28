@@ -21,7 +21,6 @@ func (p *CleanPlugin) OnStorageUpdate(current types.Storage) (types.Storage, err
 }
 
 func (p *CleanPlugin) OnDeviceCreate(dev types.Device) (types.Device, error) {
-	dev.Config = types.Storage{Meta: "clean-metadata"}
 	return dev, nil
 }
 func (p *CleanPlugin) OnDeviceUpdate(dev types.Device) (types.Device, error) { return dev, nil }
