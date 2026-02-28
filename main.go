@@ -14,6 +14,7 @@ func (p *CleanPlugin) OnInitialize(config runner.Config, state types.Storage) (t
 }
 
 func (p *CleanPlugin) OnReady()                       {}
+func (p *CleanPlugin) OnShutdown()                    {}
 func (p *CleanPlugin) OnHealthCheck() (string, error) { return "perfect", nil }
 func (p *CleanPlugin) OnStorageUpdate(current types.Storage) (types.Storage, error) {
 	return current, nil
